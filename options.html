@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Options</title>
+    <link rel="stylesheet" href="styles/estilo.css" id="cssCambio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contenedorGeneral" id="contenedorGeneralOptions">
+      <div class="botonVolverIndex" id="botonVolverIndexOptions">
+        <button type="button" onclick="location.href='index.html'">x</button>
+      </div>
+      <div class="titulos" id="tituloOptions">
+        <h2>Options</h2>
+      </div>
+
+      <section class="listaBarras" id="listaBotonescontenedorOptions">
+        <div class="cuadroBarrasAjustes" id="cuadroBarrasAjustesOptions">
+          <div class="contenedorLista" id="contenedorListaOptions">
+            <ul class="listaAjustes" id="listaBotonesPortadaJuego">
+              <li>GFX:</li>
+              <li>BGM:</li>
+              <li>SFX:</li>
+            </ul>
+          </div>
+          <div class="barrasAjustesContenedor" id="barrasOptionsContenedor">
+            <div class="barrasAjustes" id="barrasOptions">
+              <div class="barra">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="100"
+                  class="barraValor"
+                  id="barraValorOpcionesGFX"
+                >
+              </div>
+              <div class="valor">
+                <p>Valor: <span id="demoGFX">100</span></p>
+              </div>
+            </div>
+
+            <div class="barrasAjustes" id="barrasOptionsGBM">
+              <div class="barra">
+              
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="100"
+                  class="barraValor"
+                  id="barraValorOpcionesGBM"
+                />
+              </div>
+              <div class="valor">
+                <p>Valor: <span id="demoGBM">100</span></p>
+              </div>
+            </div>
+            <div class="barrasAjustes" id="barrasOptionsSFX">
+              <div class="barra">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="100"
+                  class="barraValor"
+                  id="barraValorOpcionesSFX"
+                />
+              </div>
+              <div class="valor">
+                <p>Valor: <span id="demoSFX">100</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

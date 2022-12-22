@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play</title>
+    <link rel="stylesheet" href="styles/estilo.css" id="cssCambio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+    />
+  </head>
+  <body>
+    <div class="contenedorGeneral" id="contenedorGeneralGame">
+      <div class="contenedorPausa" id="contenedorPausaGame">
+        <div class="botonVolverIndex" id="botonVolverIndexGame">
+          <button
+            type="submit"
+            class="botonPopUp"
+            onclick="openPopUp(); pausarJuego() "
+          >
+            ||
+          </button>
+        </div>
+      </div>
+
+      <div class="contenedorJuego" id="contenedorJuegoPlay">
+        <div class="marcadorJuego" id="marcadorJuegoPlay">
+          <div class="tiempoJuego" id="tiempoJuegoPlay">
+            <h3>Tiempo: <span id="spanTiempo">60</span></h3>
+          </div>
+          <div class="puntosJuego" id="puntosJuegoPlay">
+            <h3>Puntos: <span id="spanPuntos">0</span></h3>
+          </div>
+        </div>
+        <div class="areaJuego" id="areaJuegoPlay">
+          <div class="areaJuegoBordes" id="areaJuegoBordesPlay">
+            <img
+              src="imgs/caraRiendoDos_Azul.png"
+              alt=""
+              class="waveObjetivo"
+              id="waveObjetivoPlay"
+              onclick="clicImagen()"
+            />
+          </div>
+        </div>
+        <div class="botonesJuego" id="botonJugarOtraVez">
+          <button id="bontonEmpezar" onclick="empezarJuego()">
+            empezar juego
+          </button>
+          <button id="bontonEmpezarOtraVez" onclick="empezarJuegoOtraVez()">
+            volver a jugar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popUp" id="popUpPlay">
+      <div class="tituloPopUp" id="tituloPopUpPlay">
+        <h3>Pausa</h3>
+      </div>
+      <div class="botonesPopUp" id="botonesPopUpPlay">
+        <button
+          type="button"
+          class="botonPopUp"
+          id="botonPopUpPlay"
+          onclick="closePopUp(); continuarJuego()"
+        >
+          Continuar
+        </button>
+        <button type="button" onclick="location.href='index.html'">
+          Salir
+        </button>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

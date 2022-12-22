@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom</title>
+    <link rel="stylesheet" href="styles/estilo.css" id="cssCambio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contenedorGeneral" id="contenedorGeneralCustom">
+      <div class="botonVolverIndex" id="botonVolverIndexCustom">
+        <button type="button" onclick="location.href='index.html'">x</button>
+      </div>
+      <div class="titulos" id="tituloCustom">
+        <h2>Custom</h2>
+      </div>
+      <div class="listaBotonesContenedor" id="listaBotonescontenedorCustom">
+        <ul class="listaBotones" id="listaBotonesCustom">
+          <li>
+            <button type="submit" class="botonPopUp" onclick="cambioColor()">
+              Color UI
+            </button>
+          </li>
+          <li>
+            <button type="submit" class="botonPopUp" onclick="openPopUp()">
+              Wave
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="popUp" id="popUpPlay">
+      <div class="elegirWave" id="elegirWaveCustom">
+        <div class="waveCustomContenedor">
+          <div class="imagenContenedor" id="imagenContenedorWave1">
+            <img
+              src="imgs/caraRiendoDos_Azul.png"
+              alt="dashPersonaje"
+              title="dashPersonaje"
+              onclick="elegirWave('waveUno'); seleccionarWave()"
+              id="waveUnoEleccion"
+            />
+          </div>
+        </div>
+        <div class="waveCustomContenedor">
+          <div class="imagenContenedor" id="imagenContenedorWave2">
+            <img
+              src="imgs/caraSonriente_Azul.png"
+              alt="dashPersonaje"
+              title="dashPersonaje"
+              onclick="elegirWave('waveDos'); seleccionarWave()"
+              id="waveDosEleccion"
+            />
+          </div>
+        </div>
+        <div class="waveCustomContenedor">
+          <div class="imagenContenedor" id="imagenContenedorWave3">
+            <img
+              src="imgs/gatoGD_azul.png"
+              alt="dashPersonaje"
+              title="dashPersonaje"
+              onclick="elegirWave('waveTres'); seleccionarWave()"
+              id="waveTresEleccion"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="aplicarWave" id="aplicarWaveCustom">
+        <button
+          type="button"
+          class="botonPopUp"
+          id="botonPopUpCustom"
+          onclick="closePopUp()"
+        >
+          Salir
+        </button>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
