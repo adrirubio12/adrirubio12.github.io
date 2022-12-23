@@ -316,6 +316,7 @@ h3 {
   width: 50px;
   height: 50px;
   position: absolute;
+  z-index: 9999;
 }
 
 #botonVolverIndexGame {
@@ -499,7 +500,7 @@ h3 {
     justify-content: space-around;
     align-items: center;
   }
-  h3{
+  h3 {
     font-size: 45px;
   }
   .botonVolverIndex button {
@@ -513,7 +514,6 @@ h3 {
     font-family: "Silkscreen", cursive;
     text-align: center;
   }
-  
 }
 @media (min-width: 1920px) {
   h1 {

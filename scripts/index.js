@@ -298,7 +298,6 @@ if (location.pathname.includes("/play.html")) {
 
   //Obtener el clic del usuario
   function clicImagen() {
-    console.log("Hola");
     clearTimeout(temporizador);
     waveJuego.style.display = "none";
     contarAcierto();
