@@ -44,16 +44,15 @@ if (location.pathname.includes("/custom.html")) {
   cambioColorWavePopUp();
   color = JSON.parse(sessionStorage.getItem("color"));
   if (color === 0) {
-    if(sinElegir === 3){
+    if (sinElegir === 3) {
       sinElegir = 0;
-    }else if(sinElegir === 2){
+    } else if (sinElegir === 2) {
       sinElegir = 2;
     }
-   
-  }else {
-    if(sinElegir === 3){
+  } else {
+    if (sinElegir === 3) {
       sinElegir = 1;
-    }else if(sinElegir === 2){
+    } else if (sinElegir === 2) {
       sinElegir = 2;
     }
   }
@@ -240,6 +239,9 @@ let contadorAciertos = document.getElementById("spanPuntos"),
   botonJugar = document.getElementById("bontonEmpezar"),
   botonJugarOtraVez = document.getElementById("bontonEmpezarOtraVez"),
   areaJuego = document.getElementById("areaJuegoBordesPlay"),
+  divMarcador = document.getElementById("marcadorJuegoPlay"),
+  divPausa = document.getElementById("contenedorPausaGame"),
+  contenedorAreaJuego = document.getElementById("areaJuegoPlay"),
   tiempoTotal = 60,
   tiempoRestante = tiempoTotal,
   numeroAciertos = 0,
@@ -272,16 +274,20 @@ if (location.pathname.includes("/play.html")) {
     // Tiempo para que desaparezca
     let tiempoDificultad = 3000,
       //Coordenadas máximas en las que la imagen aparece
-      anchoPantalla = window.outerWidth,
-      altoPantalla = window.outerHeight;
+      anchoPantalla = window.outerWidth;
 
-    let minximoX = anchoPantalla - areaJuego.clientWidth;
-    let minimoY = altoPantalla - areaJuego.clientHeight;
+    let altoPausa = divPausa.offsetHeight;
+    let altoMarcador = divMarcador.offsetHeight;
+
+    let minX = (anchoPantalla - areaJuego.clientWidth) / 2;
+    let minY = altoMarcador + altoPausa + 4;
+    let maxX = anchoPantalla - minX - 50;
+    let maxY = altoPausa + altoMarcador + areaJuego.offsetHeight - 4 -50;
 
     //Coordenadas aleatorias entre 0 y el máximo
-    let x = Math.random() * (anchoPantalla - 50 - (minximoX + 50)) + minximoX;
-    let y = Math.random() * (altoPantalla - 50 - (minimoY + 50)) + minimoY;
-
+    let x = Math.random() * (maxX - minX) + minX;
+    let y = Math.random() * (maxY - minY) + minY;
+   
     // Establecer la posición aleatoria del elemento waveJuego
     waveJuego.style.left = x + "px";
     waveJuego.style.top = y + "px";
