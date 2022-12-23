@@ -318,6 +318,7 @@ if (location.pathname.includes("/play.html")) {
 
   // Finalizar juego
   function finalizarJuego() {
+    iniciar = false;
     clearInterval(temporizadorJuego);
     clearTimeout(temporizador);
     clearTimeout(temporizadorPausa);
@@ -341,6 +342,7 @@ if (location.pathname.includes("/play.html")) {
     contadorAciertos.value = 0;
     contadorAciertos.textContent = "0";
     tiempoTranscurrido = 0;
+    iniciar = true;
     iniciarJuego();
   }
 
