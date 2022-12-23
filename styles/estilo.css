@@ -202,22 +202,11 @@ h3 {
   -webkit-appearance: none;
   appearance: none;
   width: 5%;
-  /*-----No puedo adaptar bien el circulo */
   height: 10px;
   border-radius: 100%;
   background: #14ffec;
   cursor: alias;
 }
-
-/*
-.barrasAjustes input{
-  width: 100%;
-  height: 7%;
-  background-color: #212121;
-  border-radius: 80px;
-  border: 2px solid #0d7377;
-  cursor: pointer;
-}*/
 
 /*-----------------Guia--------------------*/
 
@@ -398,11 +387,9 @@ h3 {
 
 .openPupUp {
   visibility: visible;
-  
 }
 
-/*/
-/----popUp Custom-----//*/
+/*------popUp Custom-------*/
 
 .elegirWave {
   width: 100%;
@@ -459,4 +446,84 @@ h3 {
 
 .difuminadoFondo {
   filter: blur(20px);
+}
+
+@media (min-width: 960px) {
+  h1 {
+    font-size: 120px;
+    margin: 0px;
+    color: #14ffec;
+  }
+  h2 {
+    font-size: 100px;
+    margin: 0px;
+    color: #14ffec;
+  }
+  .listaBotonesContenedor {
+    height: 60%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+  .contenidoGuiaSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .apartadosGuia {
+    background-color: #14ffec;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+    height: 80%;
+    width: 80%;
+    max-width: 700px;
+    max-height: 200px;
+    min-width: 250px;
+    min-height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tituloPopUp h3 {
+    color: #14ffec;
+    font-size: 45px;
+  }
+  .marcadorJuego {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  h3{
+    font-size: 45px;
+  }
+  .botonVolverIndex button {
+    background-color: #14ffec;
+    color: #212121;
+    border-radius: 100%;
+    padding: 0px;
+    border: 2px solid #0d7377;
+    width: 30px;
+    height: 30px;
+    font-family: "Silkscreen", cursive;
+    text-align: center;
+  }
+  
+}
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 140px;
+    margin: 0px;
+    color: #14ffec;
+  }
+  h2 {
+    font-size: 120px;
+    margin: 0px;
+    color: #14ffec;
+  }
 }
