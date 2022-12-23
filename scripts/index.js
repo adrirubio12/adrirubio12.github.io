@@ -44,10 +44,18 @@ if (location.pathname.includes("/custom.html")) {
   cambioColorWavePopUp();
   color = JSON.parse(sessionStorage.getItem("color"));
   if (color === 0) {
-    sinElegir = 0;
-  } else if (sinElegir === 2) {
-  } else {
-    sinElegir = 1;
+    if(sinElegir === 3){
+      sinElegir = 0;
+    }else if(sinElegir === 2){
+      sinElegir = 2;
+    }
+   
+  }else {
+    if(sinElegir === 3){
+      sinElegir = 1;
+    }else if(sinElegir === 2){
+      sinElegir = 2;
+    }
   }
   sessionStorage.setItem("sinElegir", JSON.stringify(sinElegir));
 }
@@ -108,7 +116,6 @@ function elegirWave(opcion) {
 if (playPaguina !== null) {
   let numeroWave = JSON.parse(sessionStorage.getItem("numeroWaveGloval"));
   sinElegir = JSON.parse(sessionStorage.getItem("sinElegir"));
-
   if (sinElegir === 0) {
     waveJuego.src = "imgs/caraRiendoDos_rojo.png";
   } else if (sinElegir === 1) {
